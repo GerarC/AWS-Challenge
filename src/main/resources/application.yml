@@ -1,0 +1,10 @@
+spring:
+    profiles:
+        active: dev
+    application:
+        name: Aws Challenge API
+
+app:
+    name: Aws Challenge API
+    version: 0.0.1
+    description: Microservice for managing users
