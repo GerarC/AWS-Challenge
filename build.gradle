@@ -1,6 +1,7 @@
 plugins {
 	id 'java'
 	id 'jacoco'
+	id "org.sonarqube" version "6.0.1.5171"
 	id 'org.springframework.boot' version '3.4.4'
 	id 'io.spring.dependency-management' version '1.1.7'
 }
@@ -84,5 +85,13 @@ jacocoTestReport {
 		classDirectories.setFrom(files(classDirectories.files.collect {
 			fileTree(dir: it, exclude: jacocoExclude)
 		}))
+	}
+}
+
+sonar {
+	properties {
+		property "sonar.projectKey", "GerarC_AWS-Challenge"
+		property "sonar.organization", "gerarc"
+		property "sonar.host.url", "https://sonarcloud.io"
 	}
 }
