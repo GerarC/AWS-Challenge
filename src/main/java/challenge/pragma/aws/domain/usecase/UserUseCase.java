@@ -16,7 +16,7 @@ public class UserUseCase implements UserServicePort {
     }
 
     @Override
-    public User createOwner(User user) {
+    public User createUser(User user) {
         validateUser(user);
         return userPersistencePort.saveUser(user);
     }

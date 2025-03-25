@@ -1,5 +1,8 @@
 package challenge.pragma.aws.domain.util;
 
+import challenge.pragma.aws.domain.util.annotation.Generated;
+
+@Generated
 public class DomainConstants {
 
     private DomainConstants() {

@@ -21,7 +21,7 @@ public class UserHandlerImpl implements UserHandler {
     public UserResponse createUser(UserRequest request) {
         User user = userRequestMapper.toDomain(request);
         return userResponseMapper.toResponse(
-                userServicePort.createOwner(user)
+                userServicePort.createUser(user)
         );
     }
 
